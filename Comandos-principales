@@ -2,4 +2,4 @@
 Para cambiar el nombre de la máquina Linux se debe acceder a los ficheros /etc/hostname i /etc/hosts
 
 # Configuración de red
-- Para ver las targetes de red que dispone el equipo usamos la comando: ip -a -4 -br address
+- Para ver las targetas de red que dispone el equipo usamos la comando: ip -a -4 -br address
