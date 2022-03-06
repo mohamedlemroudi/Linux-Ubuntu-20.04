@@ -64,6 +64,16 @@ La comanda chage modifica el nombre de dias entre canvios de contrasenya i la da
 - Para cerrar sessión: exit
 - Para saber con qué usuario hemos iniciado sesión: whoami
 
+# Para ver información sobre usuarios y grupos
+- Para ver el identificador del usuario (UID) y los grupos que pertenece un usuario juntamente con el identificador de cada grupo (GID), usamos la comanda: id
+- Para mostrar los nombres de los grupos que pertenece un usuario: groups [usuario]
+- Para mostrar información de los usuarios (podemos ver usuarios locales com usuarios del dominio (LDAP): getent passwd
+- Para mostrar información solo de un usuario: getent passwd <usuario>
+- Para ver tanto grupos locales como de dominio (LDAP): getent group
+- Para mostrar información solo de un grupo: gentent group <grupo>
+
+# Fitcheros especiales
+
 
 
 
