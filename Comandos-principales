@@ -13,3 +13,24 @@ Para cambiar el nombre de la máquina Linux se debe acceder a los ficheros /etc/
  # Actualizar el sistema
 - El comando para actualizar Linux es apt-get upgrade, pero antes se debe ejecutar apt-get update, para saber que paquetes debes actualizar.
 - Para actualizar el núcleo del sistema debemos ejectar la comando: apt-get dist-upgrade, i despues reiniciar el equip (reboot).
+
+# Creación de usuarios
+- Para crear un usuario debemos de utilizar la siguiente comanda: adduser <usuario>.
+- El usuario no debe de empezar con números ni tener acentos, para evitar esta restricción se debe añadir el siguiente parámetro: --force-badname.
+- Por defecto, cuando se creará un usuario también se crea un grupo con su nombre y se le asigna como a grupo principal.
+- La carpeta del usuario no se crear hasta que el usuario sé válida por primera vez. 
+- Por defecto, las carpetas de usuarios se creen dentro de /home y se le copia el contenido a la carpeta /etc/skel.
+- Para crear un usuario y asignar-le el grupo principal (el grupo debe de existir): sudo adduser <usuario> --ingroup <group>
+- Para asignar un directorio "home" al usuario: sudo adduser <usuario> --home <directorio_home>
+
+# Eliminación de usuarios
+- Para eliminar un usuario: sudo deluser <usuario>
+- Para eliminar un usuario y su directorio: sudo deluser --remove-home <usuario>
+
+# Creación de grupos
+- La comanda para crear un grupo: sudo addgroup <grupo>
+
+# Eliminación de grupos
+La comando para eliminar grupos: sudo delgroup <grupo>
+
+
