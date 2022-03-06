@@ -73,6 +73,13 @@ La comanda chage modifica el nombre de dias entre canvios de contrasenya i la da
 - Para mostrar información solo de un grupo: gentent group <grupo>
 
 # Fitcheros especiales
+Hay diversos ficheros de texto en Linux que contienen información referente a los usuarios y los grupos de usuarios donados de alta en el sistema.
+- /etc/passwd -> Contiene la información de los usuarios del sistema. Cada línia és un usuario i cada campo està separado por dos puntos (:).
+- /etc/shadow -> Contiene las contraseñas cifradas de los usuarios y otras informaciones, como por ejemplo la última data en que se va a cambiar la contraseña.
+- /etc/group -> Contiene la información de los grupos.
+- /etc/gshadow -> Contiene las contraseñas encriptadas de los grupos.
+- /etc/sudoers -> Contiene información sobre los derechos y privilegios de los usuarios. Para editar-lo se debe utilitzar la siguiente comanda: sudo visudo
+
 
 
 
