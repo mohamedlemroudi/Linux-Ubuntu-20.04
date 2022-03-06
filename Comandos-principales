@@ -2,4 +2,14 @@
 Para cambiar el nombre de la máquina Linux se debe acceder a los ficheros /etc/hostname i /etc/hosts
 
 # Configuración de red
-- Para ver las targetas de red que dispone el equipo usamos la comando: ip -a -4 -br address
+- Para ver las tarjetas de red que dispone el equipo usamos la comando: ip -a -4 -br address
+- Si queremos configurar la tarjeta de red debemos de acceder al fichero: /etc/netplan/01-netcfg.yaml
+- Una vez que hemos configurado la tarjeta de red debemos de reiniciar la tarjeta porque coje los cambios: sudo netplan apply
+- Las comandas que podemos utilizar para comprobar la configuración de red son:
+      - ip -4 -br addre: Para comprobar la IP y la máscara de cada tarjeta de red.
+      - ip router: Para ver la gateway
+      - systemd-resolve --status: Para ver que servidores DNS se utilizan para resolver los nombre de dominio
+ 
+ # Actualizar el sistema
+- El comando para actualizar Linux es apt-get upgrade, pero antes se debe ejecutar apt-get update, para saber que paquetes debes actualizar.
+- Para actualizar el núcleo del sistema debemos ejectar la comando: apt-get dist-upgrade, i despues reiniciar el equip (reboot).
