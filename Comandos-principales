@@ -31,6 +31,40 @@ Para cambiar el nombre de la máquina Linux se debe acceder a los ficheros /etc/
 - La comanda para crear un grupo: sudo addgroup <grupo>
 
 # Eliminación de grupos
-La comando para eliminar grupos: sudo delgroup <grupo>
+- La comando para eliminar grupos: sudo delgroup <grupo>
+
+# Assignar usuarios a grupos
+- Para agregar un grupo secondario a un usuario: sudo adduser <usuario> <grupo>. (El usuario y grupo deben de existir).
+
+# Usermod
+La comando <usermod> sirve para cambiar la configuración de la cuenta del usuario, así como bloquear y desbloquear una cuenta.
+-g -> Para cambiar el grupo principal del usuario: sudo usermod -g <grupo> <usuario>
+-aG -> Para añadir el usuario a grupos secundarios: sudo usermod -aG <grupo> [, grupo ...] <usuario>
+-m -> Para cambiar el directorio personal y mover los archivos al nuevo directorio: sudo usermod -m -d /home/nuevo_dir <usuario>
+-l -> Para cambiar el nombre de la cuenta (login): sudo usermod -l nuevo_login
+-L -> Para deshabilitar temporalmente un usuario: sudo usermod -L <usuario>
+-u -> Para cambiar el identificador de la cuenta (UID): sudo usermod -u nuevo_id <usuario>. (El nuevo id no debe de existir y debe de ser un número positivo).
+
+# Canviar contraseñas 
+- Para cambiar la propia contraseña (la del usuario con el cual estamos trabajando): passwd
+- Para cambiar la contraseña de un usuario: sudo passwd <usuario>
+- Para eliminar la contraseña de un usuario i desactivar la cuenta: sudo passwd -l <usuario>
+- Para reactivar una cuenta de usuario que ha estado desactivada: sudo passwd -u <usuario>
+
+# Chage
+La comanda chage modifica el nombre de dias entre canvios de contrasenya i la data del último canvio de contraseño.
+- Para obtener información sobre el 'tiempo de vida' de la contraseña de un usuario: sudo chage -l <usuario>
+- Para definir que el usuario debe de cambiar la contraseña cada x tiempo se debe ejecutar la seguiente comanda: sudo chage -M 90 <usuario>. (Le hemos indicado cada 90 días).
+- Para definir la data de caducidad de la contraseña: sudo chage -E 2025-03-6 <usuario>
+- Para comprobar que los cambios se han afectado: sudo chage -l <usuario>.
+
+# Iniciar sessión con un otro usuario
+- Para canviar al usuario root: sudo su
+- Para canviar a un otro usuario: sudo login <usuario>
+- Para cerrar sessión: exit
+- Para saber con qué usuario hemos iniciado sesión: whoami
+
+
+
 
 
