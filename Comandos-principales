@@ -1,5 +1,6 @@
 # Cambiar el nombre del equipo
 Para cambiar el nombre de la máquina Linux se debe acceder a los ficheros /etc/hostname i /etc/hosts
+Si queremos ver el nombre cambiado usamos la comanda: hostnamectl o hostname -f.
 
 # Configuración de red
 - Para ver las tarjetas de red que dispone el equipo usamos la comando: ip -a -4 -br address
